@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    .bg-primary {
+        background-color: #2348ff;
+    }
+
+    .w-100\% {
+        width: 100%;
+    }
+}
 
 @layer components {
     .btn {
