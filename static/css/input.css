@@ -2,9 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    .bg-primary {
+        background-color: #2348ff;
+    }
+
+    .w-100\% {
+        width: 100%;
+    }
+}
 
 @layer components {
     .btn {
-        @apply rounded py-2 px-4 hover:brightness-90 active:brightness-110
+        @apply rounded py-2 px-4 cursor-pointer hover:brightness-90 active:brightness-110
     }
 }
