@@ -8,8 +8,8 @@
     <link rel='stylesheet' href='/static/css/tailwind.css'>
     <link rel='stylesheet' href='/static/css/app.css'>
 </head>
-<body>
-    <section class='hero-section hero-section--home'>
+<body class='overflow-x-hidden'>
+    <section class='relative z-10 hero-section hero-section--home'>
         <div class='hero-section__content'>
             <h1 class='hero-section__header brand'>Zoar Valley Software</h1>
             <p class='hero-section__lead mb-4'>
@@ -22,9 +22,12 @@
         </div>
     </section>
 
-    <main class='grid place-content-center gap-32 md:gap-56 mb-56'>
+    <main class='relative grid place-content-center gap-32 md:gap-56 mb-56'>
+        <img class='absolute w-[50rem] -translate-x-[50%] -translate-y-[18%] z-0' src='/static/img/blobs/blob.svg'/>
+
         <section class='text-center md:text-left grid md:grid-cols-2 place-items-center px-8 pt-32 gap-12 max-w-[120rem]'>
-            <div class='grid gap-4 place-items-center md:place-items-start'>
+            
+            <div class='grid gap-4 place-items-center md:place-items-start z-10'>
                 <h2 class='text-6xl font-semibold'>Web Development</h2>
                 <p class='max-w-xl'>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nemo ipsa eveniet facere, sunt consectetur soluta reiciendis incidunt neque minus quod quisquam repellat mollitia nam dolorum fugit delectus voluptatibus at!

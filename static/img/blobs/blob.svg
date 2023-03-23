@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 200 200"
+   version="1.1"
+   id="svg2146"
+   sodipodi:docname="blob.svg"
+   inkscape:version="1.2.2 (1:1.2.2+202212051552+b0a8486541)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2150">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3030">
+      <stop
+         style="stop-color:#3763cb;stop-opacity:1;"
+         offset="0"
+         id="stop3026" />
+      <stop
+         style="stop-color:#37cbbf;stop-opacity:0;"
+         offset="1"
+         id="stop3028" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3030"
+       id="linearGradient3032"
+       x1="44.191666"
+       y1="49.828987"
+       x2="-76.728813"
+       y2="-83.536423"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.05789259,-0.99832282,-0.99832282,-0.05789259,96.564912,107.6601)" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview2148"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="4.25"
+     inkscape:cx="69.764706"
+     inkscape:cy="81.529412"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2146" />
+  <path
+     fill="#FF0066"
+     d="M 151.77602,58.974762 C 150.66655,45.287577 133.15988,36.258929 115.57062,33.836581 97.975556,31.514055 80.292124,35.897671 66.458659,44.711595 52.625203,53.525524 42.541876,66.763977 33.723057,82.379622 24.910013,97.895435 17.361497,115.78844 22.627768,128.61483 c 5.272077,12.72656 23.452989,20.49212 38.740333,22.88115 15.287328,2.38904 27.575448,-0.50443 45.024349,2.61096 17.44313,3.21522 40.04124,12.53912 43.61797,6.13545 3.48268,-6.5093 -12.05025,-28.846 -12.17864,-49.08738 -0.12838,-20.241381 15.15934,-38.587103 13.94424,-52.180248 z"
+     id="path2144"
+     style="fill:url(#linearGradient3032);fill-opacity:1" />
+</svg>
