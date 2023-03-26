@@ -1,0 +1,27 @@
+---
+export interface Props {
+    header: string,
+    lead?: string | undefined,
+    imgSrc?: string | undefined
+};
+
+const { header, lead, imgSrc } = Astro.props;
+---
+
+<section class='relative z-10 grid place-items-center object-contain text-center h-[75vh] overflow-hidden'>
+    <div class='absolute top-0 w-[100%] h-[100%]'>
+        <img class='w-[100%] h-[100%] bg-slate-100 object-cover brightness-[.65]' src={ imgSrc } alt="">
+    </div>
+    
+    <div class='z-10 text-white w-100%'>
+        <h1 class='text-4xl md:text-7xl font-bold mb-4'>{ header }</h1>
+        <p class='text-2xl mb-4'>
+            { lead }
+        </p>
+
+        <div class='flex gap-4 justify-center font-medium'>
+            <a href='mailto:zoarvalleysoftware@gmail.com' class='btn bg-primary'>Ask About a Project</a>
+            <a href='#' class='btn bg-slate-800'>Learn More</a>
+        </div>
+    </div>
+</section>

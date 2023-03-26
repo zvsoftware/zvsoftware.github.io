@@ -2,23 +2,17 @@
 import Layout from '../layouts/Layout.astro';
 import DevBanner from '../components/DevBanner.astro';
 import ServiceSection from '../components/ServiceSection.astro';
+import PageHero from '../components/PageHero.astro';
 ---
 <Layout title='Zoar Valley Software'>
 	<DevBanner/>
 
     <!-- Hero section -->
-    <section class='relative z-10 hero-section hero-section--home'>
-        <div class='hero-section__content'>
-            <h1 class='hero-section__header brand'>Zoar Valley Software</h1>
-            <p class='hero-section__lead mb-4'>
-                Devloping Awesome Software for Small Businesses
-            </p>
-            <div class='flex gap-4 justify-center font-medium'>
-                <a href='mailto:zoarvalleysoftware@gmail.com' class='btn bg-primary'>Ask About a Project</a>
-                <a href='#' class='btn bg-slate-800'>Learn More</a>
-            </div>
-        </div>
-    </section>
+    <PageHero
+        header='Software Solutions for Your Business'
+        lead='Custom software to solve real problems'
+        imgSrc='/static/img/home_hero.jpg'
+    />
 
     <main class='text-lg'>
         <!-- Services -->
