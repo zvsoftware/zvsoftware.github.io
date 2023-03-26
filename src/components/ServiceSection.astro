@@ -1,0 +1,35 @@
+---
+
+export interface Props {
+    service: string,
+    imageSrc: string,
+    description: string,
+    reversed?: boolean,
+    class?: string | null
+}
+
+const { service, description, reversed, imageSrc, class: className } = Astro.props;
+---
+
+<section class={`relative text-center md:text-left grid md:grid-cols-2 place-items-center px-8 gap-12 max-w-[120rem] ${ className ? className: "" }`}>    
+    
+    { 
+        reversed ? <img src={ imageSrc } alt='' class='w-72 hidden md:block'/> 
+        : "" 
+    }
+
+    <div class='grid gap-4 place-items-center md:place-items-start z-10'>
+        <h2 class='text-6xl font-semibold'>{ service }</h2>
+        <p class='max-w-xl'>
+            { description }
+        </p>
+        <a href='#' class='btn bg-primary text-white w-fit text-xl font-medium'>Explore</a>
+    </div>
+    
+    { 
+        !reversed ? <img src={ imageSrc } alt='' class='w-72 hidden md:block'/> 
+        : "" 
+    }
+
+    <slot/>
+</section>

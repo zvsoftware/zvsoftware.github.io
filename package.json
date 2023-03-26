@@ -1,15 +1,19 @@
 {
-  "name": "zoarvalleysoftware.com",
-  "version": "1.0.0",
-  "description": "Website for Zoar Valley Software LLC",
-  "main": "index.js",
+  "name": "zvsoftware",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "npx tailwindcss -i ./static/css/input.css -o ./static/css/tailwind.css --watch --minify",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "css": "npx tailwindcss -i ./public/static/css/input.css -o ./public/static/css/tailwind.css --watch --minify",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "author": "Timothy Batt (JamminCoder)",
-  "license": "MIT",
+  "dependencies": {
+    "astro": "^2.1.7"
+  },
   "devDependencies": {
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.2.7"
   }
 }

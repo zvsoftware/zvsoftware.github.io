@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DevBanner from '../components/DevBanner.astro';
+import ServiceSection from '../components/ServiceSection.astro';
+---
+<Layout title='Zoar Valley Software'>
+	<DevBanner/>
+
+    <!-- Hero section -->
+    <section class='relative z-10 hero-section hero-section--home'>
+        <div class='hero-section__content'>
+            <h1 class='hero-section__header brand'>Zoar Valley Software</h1>
+            <p class='hero-section__lead mb-4'>
+                Devloping Awesome Software for Small Businesses
+            </p>
+            <div class='flex gap-4 justify-center font-medium'>
+                <a href='mailto:zoarvalleysoftware@gmail.com' class='btn bg-primary'>Ask About a Project</a>
+                <a href='#' class='btn bg-slate-800'>Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <main class='text-lg'>
+        <!-- Services -->
+        <section class='grid place-content-center gap-32 md:gap-64 py-28 md:py-40'>
+            <ServiceSection 
+				service="Web Development" 
+				description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nemo ipsa eveniet facere, sunt consectetur soluta reiciendis incidunt neque minus quod quisquam repellat mollitia nam dolorum fugit delectus voluptatibus at!"
+				imageSrc="/static/img/web.png"
+			>
+				<img class='absolute w-[50rem] -translate-x-[50vw] z-0' src='/static/img/blobs/blob.svg'/>    
+			</ServiceSection>
+			
+			<ServiceSection
+				service="Inernet of Things"
+				description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nemo ipsa eveniet facere, sunt consectetur soluta reiciendis incidunt neque minus quod quisquam repellat mollitia nam dolorum fugit delectus voluptatibus at!"
+				imageSrc='/static/img/iot.png'
+				reversed={ true }
+			>
+			</ServiceSection>
+        </section>
+    
+        <!-- Extra description? -->
+        <section class='grid place-items-center text-center gap-8 py-28 bg-slate-800 text-white'>
+            <h2 class='text-6xl font-semibold'>Custom Software</h2>
+            <p class='max-w-xl'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi ab atque debitis quae possimus repellat. Autem, provident minus natus omnis culpa doloremque incidunt, cum expedita consectetur adipisci, a sint labore.</p>
+        </section>
+    </main>
+</Layout>
