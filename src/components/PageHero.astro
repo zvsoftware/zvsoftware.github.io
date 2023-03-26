@@ -8,7 +8,7 @@ export interface Props {
 const { header, lead, imgSrc } = Astro.props;
 ---
 
-<section class='relative z-10 grid place-items-center object-contain text-center h-[75vh] overflow-hidden'>
+<section class='relative z-10 grid place-items-center object-contain text-center h-[50vh] md:h-[75vh] overflow-hidden'>
     <div class='absolute top-0 w-[100%] h-[100%]'>
         <img class='w-[100%] h-[100%] bg-slate-100 object-cover brightness-[.65]' src={ imgSrc } alt="">
     </div>
@@ -18,10 +18,6 @@ const { header, lead, imgSrc } = Astro.props;
         <p class='text-2xl mb-4'>
             { lead }
         </p>
-
-        <div class='flex gap-4 justify-center'>
-            <a href='mailto:zoarvalleysoftware@gmail.com' class='btn bg-primary font-medium'>Ask About a Project</a>
-            <a href='#' class='btn bg-slate-800'>Learn More</a>
-        </div>
+        <slot name='cta' />
     </div>
 </section>

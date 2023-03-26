@@ -10,11 +10,18 @@ import PageHero from '../components/PageHero.astro';
     <!-- Hero section -->
     <PageHero
         header='Software Solutions for Your Business'
-        lead='Custom software to solve real problems'
-        imgSrc='/static/img/home_hero.jpg'
-    />
+        lead='Solving real problems with real solutions.'
+        imgSrc='/static/img/bg_dark_textured.webp'
+    >
+    
+    <div class='flex gap-4 justify-center' slot='cta'>
+        <a href='#' class='btn bg-slate-100 text-black'>Learn More</a>
+        <a href='mailto:zoarvalleysoftware@gmail.com' class='btn bg-primary font-medium'>Ask About a Project</a>
+    </div>
 
-    <main class='text-lg'>
+    </PageHero>
+
+    <main class='text-lg bg-[#0f0f0f] text-slate-100'>
         <!-- Services -->
         <section class='grid place-content-center gap-32 md:gap-64 py-28 md:py-40'>
             <ServiceSection 
@@ -22,21 +29,21 @@ import PageHero from '../components/PageHero.astro';
 				description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nemo ipsa eveniet facere, sunt consectetur soluta reiciendis incidunt neque minus quod quisquam repellat mollitia nam dolorum fugit delectus voluptatibus at!"
 				imageSrc="/static/img/web.png"
 			>
-				<img class='absolute w-[50rem] -translate-x-[50vw] z-0' src='/static/img/blobs/blob.svg'/>    
+				<!-- <img class='absolute w-[50rem] -translate-x-[50vw] z-0' src='/static/img/blobs/blob.svg'/>     -->
 			</ServiceSection>
 			
 			<ServiceSection
 				service="Inernet of Things"
 				description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nemo ipsa eveniet facere, sunt consectetur soluta reiciendis incidunt neque minus quod quisquam repellat mollitia nam dolorum fugit delectus voluptatibus at!"
-				imageSrc='/static/img/iot.png'
+				imageSrc='/static/img/iot2.svg'
 				reversed={ true }
 			>
 			</ServiceSection>
         </section>
     
         <!-- Extra description? -->
-        <section class='grid place-items-center text-center gap-8 py-28 bg-slate-800 text-white'>
-            <h2 class='text-6xl font-semibold'>Custom Software</h2>
+        <section class='grid place-items-center text-center gap-8 py-28 bg-slate-100 text-black'>
+            <h2 class='text-6xl font-semibold'>Unique Software for Unique Problems</h2>
             <p class='max-w-xl'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi ab atque debitis quae possimus repellat. Autem, provident minus natus omnis culpa doloremque incidunt, cum expedita consectetur adipisci, a sint labore.</p>
         </section>
     </main>
