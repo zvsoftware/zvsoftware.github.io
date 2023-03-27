@@ -8,16 +8,22 @@ export interface Props {
 const { header, lead, imgSrc } = Astro.props;
 ---
 
-<section class='relative z-10 grid place-items-center object-contain text-center h-[50vh] md:h-[75vh] overflow-hidden'>
+<section class='relative z-10 grid place-items-center object-contain min-h-[40vh] md:min-h-[75vh] text-center lg:text-left overflow-hidden'>
     <div class='absolute top-0 w-[100%] h-[100%]'>
-        <img class='w-[100%] h-[100%] bg-slate-100 object-cover brightness-[.65]' src={ imgSrc } alt="">
+        <img class='w-[100%] h-[100%] bg-slate-100 object-cover' src={ imgSrc } alt="">
     </div>
     
-    <div class='z-10 text-white w-100%'>
-        <h1 class='text-4xl md:text-7xl font-bold mb-4'>{ header }</h1>
-        <p class='text-2xl mb-4'>
-            { lead }
-        </p>
-        <slot name='cta' />
+    <div class='z-10 text-white w-100% grid lg:grid-cols-2 place-items-center p-16 lg:px-32 gap-24'>
+        <div>
+            <h1 class='text-4xl md:text-[4rem] md:leading-[1] font-bold mb-4 max-w-xl'>{ header }</h1>
+            <p class='text-2xl mb-4'>
+                { lead }
+            </p>
+            <slot name='cta'/>
+        </div>
+
+        <div class="hidden lg:block">
+            <div class='w-[30rem] aspect-square bg-slate-100 rounded-lg'></div>
+        </div>
     </div>
 </section>
