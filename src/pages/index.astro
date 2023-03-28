@@ -4,7 +4,7 @@ import DevBanner from '../components/DevBanner.astro';
 import ServiceSection from '../components/ServiceSection.astro';
 import PageHero from '../components/PageHero.astro';
 ---
-<Layout title='Zoar Valley Software'>
+<Layout title='Zoar Valley Software' class='bg-[#0f0f0f]'>
 	<DevBanner/>
 
     <!-- Hero section -->
@@ -19,9 +19,11 @@ import PageHero from '../components/PageHero.astro';
         <a href='mailto:zoarvalleysoftware@gmail.com' class='btn bg-primary font-medium'>Ask About a Project</a>
     </div>
 
+    <div slot='blend' class="absolute bottom-0 bg-gradient-to-b from-transparent to-[#0f0f0f] w-[100%] h-[25rem]">
+    </div>
     </PageHero>
 
-    <main class='text-lg bg-[#0f0f0f] text-slate-100'>
+    <main class='text-lg text-slate-100'>
         <!-- Services -->
         <section class='grid place-content-center gap-32 md:gap-64 py-28 md:py-40'>
             <ServiceSection 
