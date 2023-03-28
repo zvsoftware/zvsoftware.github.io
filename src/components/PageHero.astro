@@ -2,18 +2,19 @@
 export interface Props {
     header: string,
     lead?: string | undefined,
+    bgImgSrc?: string | undefined
     imgSrc?: string | undefined
 };
 
-const { header, lead, imgSrc } = Astro.props;
+const { header, lead, imgSrc, bgImgSrc } = Astro.props;
 ---
 
 <section class='relative z-10 grid place-items-center object-contain min-h-[40vh] md:min-h-[75vh] text-center lg:text-left overflow-hidden'>
     <div class='absolute top-0 w-[100%] h-[100%]'>
-        <img class='w-[100%] h-[100%] bg-slate-100 object-cover' src={ imgSrc } alt="">
+        <img class='w-[100%] h-[100%] bg-slate-100 object-cover' src={ bgImgSrc } alt="">
     </div>
     
-    <div class='z-10 text-white w-100% grid lg:grid-cols-2 place-items-center p-16 lg:px-32 gap-24'>
+    <div class='z-10 text-white w-100% max-w-[100rem] grid lg:grid-cols-2 place-items-center p-16 lg:px-32 gap-16'>
         <div>
             <h1 class='text-4xl md:text-[4rem] md:leading-[1] font-bold mb-4 max-w-3xl'>{ header }</h1>
             <p class='text-2xl mb-4'>
@@ -23,7 +24,7 @@ const { header, lead, imgSrc } = Astro.props;
         </div>
 
         <div class="hidden lg:block">
-            <div class='w-[30rem] aspect-square bg-slate-100 rounded-lg'></div>
+            <img class='w-[30rem] aspect-square bg-slate-100 rounded-lg' src={ imgSrc }/>
         </div>
     </div>
 
