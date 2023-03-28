@@ -2,19 +2,19 @@
 
 export interface Props {
     service: string,
-    imageSrc: string,
+    imgSrc: string,
     description: string,
     reversed?: boolean,
     class?: string | null
 }
 
-const { service, description, reversed, imageSrc, class: className } = Astro.props;
+const { service, description, reversed, imgSrc, class: className } = Astro.props;
 ---
 
 <section class={`relative text-center md:text-left grid md:grid-cols-2 place-items-center px-8 gap-12 max-w-[120rem] ${ className ? className: "" }`}>    
     
     { 
-        reversed ? <img src={ imageSrc } alt='' class='w-72 hidden md:block'/> 
+        reversed ? <img src={ imgSrc } alt='' class='w-96 rounded-lg hidden md:block'/> 
         : "" 
     }
 
@@ -27,7 +27,7 @@ const { service, description, reversed, imageSrc, class: className } = Astro.pro
     </div>
     
     { 
-        !reversed ? <img src={ imageSrc } alt='' class='w-72 hidden md:block'/> 
+        !reversed ? <img src={ imgSrc } alt='' class='w-96 rounded-lg hidden md:block'/> 
         : "" 
     }
 
