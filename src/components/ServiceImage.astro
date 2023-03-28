@@ -1,0 +1,13 @@
+---
+export interface Props {
+    class?: string | null;
+    style?: string | null;
+    alt?: string | null;
+    src: string;
+}
+
+const { style, class: className, src, alt } = Astro.props;
+---
+
+
+<img class={ `w-[30rem] aspect-square object-cover rounded-lg hidden md:block shadow-lg shadow-black ${ className }` } src={ src } style={ style } alt={ alt }/>
