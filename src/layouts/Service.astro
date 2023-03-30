@@ -1,0 +1,14 @@
+---
+import Layout from './Layout.astro';
+
+export interface Props {
+    class?: string | null;
+}
+
+const { class: className, frontmatter } = Astro.props;
+---
+
+<Layout title={ frontmatter.title } class={ className }>
+    <h1 class="text-4xl">{ frontmatter.title }</h1>
+</Layout>
+
