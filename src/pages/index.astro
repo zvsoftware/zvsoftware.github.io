@@ -25,23 +25,24 @@ import PageHero from '../components/PageHero.astro';
         <!-- Services -->
         <section class='grid place-content-center gap-32 md:gap-64 py-28 md:py-40'>
             <ServiceSection 
-				service="Web Development" 
+				header="Web Development" 
 				description=
                     'Websites for marketing, portfolios, e-commerce, social media, \
                     entirely custom web apps, and much more.'
-                
+                service='web'
 				imgSrc="/static/img/web.webp"
 			>
 				<!-- <img class='absolute w-[50rem] -translate-x-[50vw] z-0' src='/static/img/blobs/blob.svg'/>     -->
 			</ServiceSection>
 			
 			<ServiceSection
-				service="Inernet of Things"
+				header="Inernet of Things"
 				description=
                     'Systems for convenience, monitoring, automation, \
                     and increased efficiency and productivity.'
                     
 				imgSrc='/static/img/arduino.webp'
+                service='iot'
 				reversed={ true }
 			>
 			</ServiceSection>

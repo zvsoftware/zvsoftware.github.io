@@ -2,6 +2,7 @@
 import ServiceImage from './ServiceImage.astro';
 
 export interface Props {
+    header: string,
     service: string,
     imgSrc: string,
     description: string,
@@ -9,7 +10,7 @@ export interface Props {
     class?: string | null
 }
 
-const { service, description, reversed, imgSrc, class: className } = Astro.props;
+const { header, description, service, reversed, imgSrc, class: className } = Astro.props;
 ---
 
 <section class={`relative text-center md:text-left grid md:grid-cols-2 place-items-center px-8 gap-12 max-w-[120rem] ${ className ? className: "" }`}>    
@@ -20,11 +21,11 @@ const { service, description, reversed, imgSrc, class: className } = Astro.props
     }
 
     <div class='grid gap-4 place-items-center md:place-items-start z-10'>
-        <h2 class='text-6xl font-semibold'>{ service }</h2>
+        <h2 class='text-6xl font-semibold'>{ header }</h2>
         <p class='max-w-xl'>
             { description }
         </p>
-        <a href='#' class='btn bg-primary text-white w-fit text-xl font-medium'>Explore</a>
+        <a href={`/services/${ service }`} class='btn bg-primary text-white w-fit text-xl font-medium'>Details</a>
     </div>
     
     { 
