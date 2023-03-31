@@ -1,0 +1,27 @@
+---
+export interface Props {
+    header: string,
+    lead?: string | undefined,
+    bgImgSrc?: string | undefined,
+    class?: string | undefined,
+};
+
+const { header, lead, bgImgSrc, class: className } = Astro.props;
+---
+
+<section 
+    class={`relative z-10 grid place-items-center min-h-[40vh] md:min-h-[60vh] text-center lg:text-left overflow-hidden bg-blend-darken bg-center bg-cover ${ className }`}
+    style={ bgImgSrc ? `background-image: url(${ bgImgSrc });`: '' }
+>
+    <div class='w-100% max-w-[100rem] grid p-16 lg:px-32 gap-16'>
+        <div>
+            <h1 class='text-4xl sm:text-[4rem] sm:leading-[1] font-bold mb-4 max-w-3xl'>{ header }</h1>
+            <p class='text-2xl mb-4'>
+                { lead }
+            </p>
+            <slot name='cta'/>
+        </div>
+    </div>
+
+    <slot name='blend' />
+</section>
