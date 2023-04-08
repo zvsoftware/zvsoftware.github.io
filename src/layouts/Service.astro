@@ -1,4 +1,6 @@
 ---
+import MarkdownContainer from '../components/MarkdownContainer.astro';
+import SimpleHero from '../components/SimpleHero.astro';
 import Layout from './Layout.astro';
 
 export interface Props {
@@ -9,6 +11,14 @@ const { class: className, frontmatter } = Astro.props;
 ---
 
 <Layout title={ frontmatter.title } class={ className }>
-    <h1 class="text-4xl">{ frontmatter.title }</h1>
+    <SimpleHero 
+        header={ frontmatter.title } 
+        lead={ frontmatter.lead }
+        bgImgSrc={ frontmatter.heroImage }
+    />
+
+    <MarkdownContainer>
+        <slot/>
+    </MarkdownContainer>
 </Layout>
 

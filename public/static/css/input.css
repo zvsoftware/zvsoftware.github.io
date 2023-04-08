@@ -2,6 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+    .markdown * {
+        @apply mb-8
+    }
+
+    .markdown h1 {
+        @apply text-6xl font-medium mb-4;
+    }
+
+    .markdown h2 {
+        @apply text-5xl font-medium mb-3;
+    }
+
+    .markdown h3 {
+        @apply text-4xl font-medium mb-2;
+    }
+
+    .markdown h4 {
+        @apply text-3xl font-medium mb-2;
+    }
+
+    .markdown h5 {
+        @apply text-2xl font-medium mb-2;
+    }
+
+    .markdown h6 {
+        @apply text-xl font-medium mb-2;
+    }
+
+    .markdown img {
+        @apply rounded-lg;
+    }
+
+    .markdown pre {
+        @apply p-2 rounded
+    }
+}
+
 @layer utilities {
     .bg-primary {
         background-color: #2036FF;
@@ -17,3 +56,4 @@
         @apply rounded py-2 px-4 cursor-pointer hover:brightness-90 active:brightness-110
     }
 }
+
