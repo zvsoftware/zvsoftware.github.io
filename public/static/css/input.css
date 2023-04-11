@@ -39,11 +39,23 @@
     .markdown pre {
         @apply p-2 rounded
     }
+
+    input {
+        @apply border border-gray-400 rounded focus:bg-slate-100 px-1;
+    }
+
+    textarea {
+        resize: none;
+    }
 }
 
 @layer utilities {
     .bg-primary {
-        background-color: #2036FF;
+        @apply bg-[#2036FF] text-white;
+    }
+
+    .success {
+        @apply bg-green-600 text-white;
     }
 
     .w-100\% {

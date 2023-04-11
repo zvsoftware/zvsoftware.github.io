@@ -12,7 +12,37 @@ import Layout from '../layouts/Layout.astro';
     ></SimpleHero>
 
     <main class='grid place-items-center py-12'>
-        <p>Contact form under development.</p>
-        <h1 class='text-4xl font-bold'>Please Email <a class='text-blue-700 underline' href='mailto:zoarvalleysoftware@gmail.com'>zoarvalleysoftware@gmail.com</a></h1>
+        <h1 class='text-4xl font-bold mb-8 text-center whitespace-pre-line'>
+            <span class="text-red-600">Contact form back-end under development.</span>
+            Please Email <a class='text-blue-700 underline' href='mailto:zoarvalleysoftware@gmail.com'>zoarvalleysoftware@gmail.com</a>
+            for any inquiries.
+        </h1>
+        
+        <form method='POST' action='#WEBSITE' class='max-w-screen-md w-100% text-xl grid gap-8 px-4'>
+            <div class='w-100%'>
+                <label for='message' class='font-medium text-2xl'>What we can do for you?</label><br>
+                <textarea name='message' class='border border-gray-400 p-2 w-100% min-h-[20rem]' required></textarea>
+            </div>
+
+            <div class='grid md:grid-cols-2 gap-4'>
+                <div>
+                    <label for='email'  class='font-medium'>Your Email:</label><br>
+                    <input type='email' name='email' class='h-10' required><br>
+                    <small>You will be CC'd in the contact email.</small>
+                </div>
+    
+                <div>
+                    <label for='name' class='font-medium'>Your Name:</label><br>
+                    <input type='text' name='name' class='h-10' required>
+                </div>
+    
+                <div>
+                    <label for='company' class='font-medium'>Your Company (optional):</label><br>
+                    <input type='text' name='company' class='h-10'>
+                </div>
+            </div>
+            <button class='btn bg-primary w-fit'>Submit Contact Form</button>
+        </form>
+
     </main>
 </Layout>
