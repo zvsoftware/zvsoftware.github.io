@@ -5,20 +5,21 @@ import Layout from './Layout.astro';
 
 export interface Props {
     class?: string | null;
+    title: string;
+    lead: string;
+    heroImageSrc: string;
 }
 
-const { class: className, frontmatter } = Astro.props;
+const { class: className, title, lead, heroImageSrc} = Astro.props;
 ---
 
-<Layout title={ frontmatter.title } class={ className }>
+<Layout title={ title } class={ className }>
     <SimpleHero 
-        header={ frontmatter.title } 
-        lead={ frontmatter.lead }
-        bgImgSrc={ frontmatter.heroImage }
+        header={ title } 
+        lead={ lead }
+        bgImgSrc={ heroImageSrc }
     />
 
-    <MarkdownContainer>
-        <slot/>
-    </MarkdownContainer>
+    <slot/>
 </Layout>
 

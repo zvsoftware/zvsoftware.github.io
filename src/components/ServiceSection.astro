@@ -2,12 +2,12 @@
 import ServiceImage from './ServiceImage.astro';
 
 export interface Props {
-    header: string,
-    service: string,
-    imgSrc: string,
-    description: string,
-    reversed?: boolean,
-    class?: string | null
+    header: string;
+    service?: string;
+    imgSrc: string;
+    description: string;
+    reversed?: boolean;
+    class?: string;
 }
 
 const { header, description, service, reversed, imgSrc, class: className } = Astro.props;
@@ -22,7 +22,7 @@ const { header, description, service, reversed, imgSrc, class: className } = Ast
         <p class='max-w-xl'>
             { description }
         </p>
-        <a href={`/services/${ service }`} class='btn bg-primary text-white w-fit text-xl font-medium'>Details</a>
+        { service ? <a href={`/services/${ service }`} class='btn bg-primary text-white w-fit text-xl font-medium'>Details</a> : ''}
     </div>
 
     <slot/>

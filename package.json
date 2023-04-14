@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "css": "npx tailwindcss -i ./public/static/css/input.css -o ./public/static/css/tailwind.css --watch --minify",
+    "css": "npx tailwindcss -i ./public/css/input.css -o ./public/css/tailwind.css --watch --minify",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
