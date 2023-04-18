@@ -3,7 +3,7 @@ export function Input(props) {
     return (
         <div>
             <label htmlFor={ props.name }>{ props.label || props.name }</label><br />
-            <input className='h-8' type={ props.type || 'text' } name={ props.name } required={ props.required || true }/>
+            <input className='h-8 text-black' type={ props.type || 'text' } name={ props.name } required={ props.required === false ? false : true }/>
         </div>
     );
 }
