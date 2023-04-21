@@ -1,5 +1,5 @@
 ---
-import DevBanner from '../components/DevBanner';
+import Nav from '../components/Nav';
 
 export interface Props {
 	title: string;
@@ -20,6 +20,7 @@ const { title, class: className } = Astro.props;
 		<link rel='stylesheet' href='/css/tailwind.css'>
 	</head>
 	<body class={ className }>
+		<Nav/>
 		<slot/>
 	</body>
 </html>
