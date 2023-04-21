@@ -10,7 +10,8 @@ export function Input(props) {
 
 export function Form(props) {
     return (
-        <form 
+        <form
+            onSubmit={ props.onSubmit || null }
             className={ props.className }
             action={ props.action } method={ props.method || 'GET' }
         >

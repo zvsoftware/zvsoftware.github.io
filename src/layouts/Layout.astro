@@ -3,10 +3,11 @@ import Nav from '../components/Nav';
 
 export interface Props {
 	title: string;
+	nav?: boolean,
 	class?: string | null;
 }
 
-const { title, class: className } = Astro.props;
+const { title, nav, class: className } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -20,7 +21,7 @@ const { title, class: className } = Astro.props;
 		<link rel='stylesheet' href='/css/tailwind.css'>
 	</head>
 	<body class={ className }>
-		<Nav/>
+		{ nav !== false ? <Nav/> : '' }
 		<slot/>
 	</body>
 </html>
