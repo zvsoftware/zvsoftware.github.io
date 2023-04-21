@@ -10,27 +10,45 @@ import {Input, Form } from '../components/Form';
         lead='Custom software and websites for your business.'
     />
 
-    <main class='px-32 py-16 grid gap-16 place-content-center'>
-        <GridSection className='grid-cols-2'>
+    <main class='px-32 py-16 grid gap-32 place-content-center text-center lg:text-left'>
+        <section class="grid gap-4 place-items-center text-center">
+            <h1 class='text-4xl'>Be one of our first clients and get a discount!</h1>
+            <p>If you are one of our first 3 clients, you will get a 25% off discount for the total cost of your project</p>
+            <a href="#contact" class='btn font-medium bg-primary'>Talk to Us</a>
+        </section>
+
+        <GridSection>
             <div class="grid place-content-center text-xl">
-                <h2 class='text-6xl font-semibold mb-4'>What we do</h2>
+                <h2 class='text-6xl font-semibold mb-4'>Web Development</h2>
                 <p>
-                    We are passionate about developing software to solve problems for businesses. 
-                    From websites and desktop apps to automation and IoT systems, we will work hard to provide you with what you 
-                    need to make your business more efficient.
+                    Creating blogs, marketing & e-commerce sites, or entirely custom web applications, 
+                    we'll ensure you receive a high-quality website that is easy to use and maintain.
                 </p>
             </div>
+            
+            <img class='bg-white object-cover' src='/img/web1.webp'/>
+        </GridSection>
 
-            <div class='w-[30rem] aspect-square bg-white'></div>
+        <GridSection>
+            <div class="grid place-content-center text-xl">
+                <h2 class='text-6xl font-semibold mb-4'>Automation</h2>
+                <p>
+                    Tired of carrying out monotonus, and repetitive tasks such as data entry or data analysis?
+                    We can develop software to automate these and many more tasks, letting you focus on the things that really matter.
+                </p>
+            </div>
+            <img src='/img/graph.webp' alt='' class='lg:[grid-row:1]'>
         </GridSection>
 
         <section>
-            <h2 class='text-5xl font-medium mb-4'>Contact Us</h2>
-            <Form action='https://api.zoarvalleysoftware.com/contact' method='POST' className='max-w-xl'>
-                <label for='message'>Describe your needs:</label><br>
-                <textarea class='mb-4 w-100% text-black' name='message' id="" cols="30" rows="10" required></textarea>
+            <h2 class='text-5xl font-medium mb-4' id='contact'>Contact Us</h2>
+            <Form  action='https://api.zoarvalleysoftware.com/contact' method='POST' className='max-w-xl grid gap-4 place-content-center'>
+                <fieldset>
+                    <label for='message'>Describe what we can do for you:</label><br>
+                    <textarea class='mb-4 w-100% min-h-[10rem] h-[100%] text-black' name='message' required></textarea>
+                </fieldset>
 
-                <div class='grid grid-cols-2 gap-8 mb-8'>
+                <div class='grid place-content-center md:grid-cols-2 gap-8 mb-8'>
                     <Input 
                         name='name' 
                         label='Your name:'
@@ -51,8 +69,7 @@ import {Input, Form } from '../components/Form';
                     />
                 </div>
 
-                <button class='btn bg-primary block'>Submit Contact Form</button>
-                
+                <button class='btn w-fit bg-primary block font-medium'>Submit Contact Form</button>
             </Form>
         </section>
     </main>

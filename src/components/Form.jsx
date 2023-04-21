@@ -1,10 +1,10 @@
 
 export function Input(props) {
     return (
-        <div>
+        <fieldset>
             <label htmlFor={ props.name }>{ props.label || props.name }</label><br />
-            <input className='h-8 text-black' type={ props.type || 'text' } name={ props.name } required={ props.required === false ? false : true }/>
-        </div>
+            <input className='h-12 text-black' type={ props.type || 'text' } name={ props.name } required={ props.required === false ? false : true }/>
+        </fieldset>
     );
 }
 
