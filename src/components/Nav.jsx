@@ -8,7 +8,7 @@ export default function Nav(props) {
                     <Logo className='w-12'/>
                     <span className='hidden sm:block'>Zoar Valley Software</span>
                 </a>
-            <a href="#contact" className='text-xl underline'>Contact</a>
+            <a href="/#contact" className='text-xl underline'>Contact</a>
         </nav>
     );
 }
