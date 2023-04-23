@@ -8,13 +8,17 @@ import {Input, Form } from '../components/Form';
     <SimpleHero
         header='Zoar Valley Software LLC'
         lead='Custom software and websites for your business.'
-    />
+        bgImgSrc='/img/shapes.webp'
+        class='bg-[#0007] h-[45vh]'
+    >
+        <div slot='blend' class='bg-gradient-to-b from-transparent to-[#0f0f0f] h-32 w-100% absolute bottom-0'></div>
+    </SimpleHero>  
 
     <main class='px-32 py-16 grid gap-32 place-content-center text-center lg:text-left'>
         <section class="grid gap-4 place-items-center text-center">
             <h1 class='text-4xl'>Be one of our first clients and get a discount!</h1>
-            <p>If you are one of our first 3 clients, you will get a 25% off discount for the total cost of your project</p>
-            <a href="#contact" class='btn font-medium bg-primary'>Contact Us Now</a>
+            <p>If you are one of our first 3 clients, you will get a 30% discount for the total cost of your project.</p>
+            <a href="#contact" class='btn font-medium bg-primary'>Contact Us Now!</a>
         </section>
 
         <GridSection>
