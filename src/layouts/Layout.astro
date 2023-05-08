@@ -20,7 +20,7 @@ const { title, nav, class: className } = Astro.props;
 		<title>{ title }</title>
 		<link rel='stylesheet' href='/css/tailwind.css'>
 	</head>
-	<body class={ className }>
+	<body class={`${ className } overflow-x-clip`}>
 		{ nav !== false ? <Nav/> : '' }
 		<slot/>
 	</body>

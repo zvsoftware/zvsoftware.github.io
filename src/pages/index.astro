@@ -3,19 +3,28 @@ import Layout from '../layouts/Layout.astro';
 import SimpleHero from '../components/SimpleHero.astro';
 import GridSection from '../components/GridSection';
 import {Input, Form } from '../components/Form';
+import Blur from '../components/Blur';
 ---
 <Layout title='Zoar Valley Software' class='bg-[#0f0f0f] text-white text-lg'>
+    
     <SimpleHero
-        header='Zoar Valley Software LLC'
-        lead='Custom software and websites for your business.'
-        bgImgSrc='/img/shapes.webp'
-        class='bg-[#0007] h-[45vh]'
-    >
-        <div slot='blend' class='bg-gradient-to-b from-transparent to-[#0f0f0f] h-32 w-100% absolute bottom-0'></div>
-    </SimpleHero>  
+        header='Taking your ideas to the next level.'
+        title='Zoar Valley Software LLC'
+        bgImgSrc='/img/code.jpg'
+        class='bg-[#0007] h-[65vh] justify-start'
+        >
+        <div slot='cta' class='mt-8'>
+            <a class='btn py-3 px-6 bg-white text-black text-2xl font-medium' href='/#contact'>Get a quote</a>
+        </div>
 
-    <main class='px-32 py-16 grid gap-32 place-content-center text-center lg:text-left'>
-        <GridSection>
+        <div slot='absolutes' class="w-[100vw] h-[100%] absolute top-0 left-0 overflow-x-clip">
+            <Blur className='z-10 w-[80rem] bg-[#3489fbd9] absolute -left-[10rem] -top-[10rem] aspect-video rounded-sm' />    
+            <div class='bg-gradient-to-b from-transparent to-[#0f0f0f] h-32 w-100% absolute bottom-0'></div>
+        </div>
+    </SimpleHero>  
+    
+    <main class='relative overflow-clip px-32 py-16 grid gap-32 place-content-center text-center lg:text-left'>        
+        <GridSection className='z-20'>            
             <div class="grid place-content-center text-xl">
                 <h2 class='text-6xl font-semibold mb-4'>Web Development</h2>
                 <p>
@@ -25,9 +34,11 @@ import {Input, Form } from '../components/Form';
             </div>
             
             <img class='bg-white object-cover' src='/img/soap.png' alt='Image of a guitar website hero-section'/>
+            
         </GridSection>
 
-        <GridSection>
+
+        <GridSection className='z-20'>
             <div class="grid place-content-center text-xl">
                 <h2 class='text-6xl font-semibold mb-4'>Automation</h2>
                 <p>
@@ -38,7 +49,9 @@ import {Input, Form } from '../components/Form';
             <img src='/img/graph.webp' class='lg:[grid-row:1]' alt='Image of a data graph'>
         </GridSection>
 
-        <section>
+
+
+        <section class="z-20">
             <h2 class='text-5xl font-medium mb-4' id='contact'>Contact Us</h2>
             <Form  action='https://api.zoarvalleysoftware.com/contact' method='POST' className='max-w-xl grid gap-4 place-content-center'>
                 <fieldset>

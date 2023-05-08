@@ -1,21 +1,23 @@
 ---
 export interface Props {
     header: string,
+    title?: string,
     lead?: string | undefined,
     bgImgSrc?: string | undefined,
     class?: string | undefined,
 };
 
-const { header, lead, bgImgSrc, class: className } = Astro.props;
+const { header, title, lead, bgImgSrc, class: className } = Astro.props;
 ---
 
 <section 
-    class={`relative grid place-items-center min-h-[40vh] text-center lg:text-left overflow-hidden bg-blend-darken bg-[#0005] text-white bg-center bg-cover ${ className }`}
+    class={`relative grid place-items-center min-h-[40vh] text-center lg:text-left bg-blend-darken bg-[#0005] text-white bg-center bg-cover ${ className }`}
     style={ bgImgSrc ? `background-image: url(${ bgImgSrc });`: '' }
 >
-    <div class='w-100% z-10 max-w-[100rem] grid p-16 lg:px-32 gap-16'>
+    <div class='z-20 max-w-screen-xl grid p-16 lg:px-32 gap-16'>
         <div>
-            <h1 class='text-4xl sm:text-[4rem] sm:leading-[1] font-bold mb-4 max-w-4xl'>{ header }</h1>
+            <p class='text-2xl mb-4'>{ title }</p>
+            <h1 class='text-4xl sm:text-[4rem] md:text-[5rem]  sm:leading-[1] font-bold mb-4'>{ header }</h1>
             <p class='text-2xl mb-4'>
                 { lead }
             </p>
@@ -23,5 +25,5 @@ const { header, lead, bgImgSrc, class: className } = Astro.props;
         </div>
     </div>
 
-    <slot name='blend' />
+    <slot name='absolutes' />
 </section>
