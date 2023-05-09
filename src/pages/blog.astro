@@ -1,0 +1,25 @@
+---
+import SimpleHero from '../components/SimpleHero.astro';
+import Layout from '../layouts/Layout.astro';
+import Posts from '../components/Posts';
+
+import { getCollection, getEntryBySlug } from 'astro:content';
+
+
+const allPosts = await getCollection('blog');
+---
+
+
+<Layout title="Blog Posts">
+    <SimpleHero 
+        bgImgSrc="/img/keyboard.jpg" 
+        header="Zoar Valley Software Blog"
+        lead="Writing about cool stuff"
+        class="justify-start"
+    />
+    
+    <main class="p-16">
+        <h1 class='text-4xl font-bold mb-12'>Blog Posts</h1>
+        <Posts posts={ allPosts } />
+    </main>
+</Layout>
