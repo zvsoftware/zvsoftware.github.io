@@ -24,10 +24,10 @@ import ServiceCard from '../components/ServiceCard';
         </div>
     </SimpleHero>  
     
-    <main class='relative overflow-clip p-32 grid gap-32 place-content-center text-center lg:text-left'>
-        <section>
+    <main class='relative overflow-clip px-12 py-32 grid gap-32 place-content-center text-center lg:text-left max-w-screen-2xl mx-auto'>
+        <section class='grid place-content-center'>
             <h2 class='text-6xl font-semibold text-center mb-16'>Services</h2>
-            <div class="grid md:grid-cols-3 gap-16">
+            <div class="grid lg:grid-cols-3 gap-16">
                 <ServiceCard title='Web Development'>
                     Creating high-quality, user-friendly websites that help you achieve your online goals. 
                     Whether it's marketing, blogs, e-commerce, or custom web apps, we cover a wide range of needs. 
@@ -45,10 +45,22 @@ import ServiceCard from '../components/ServiceCard';
             </div>
         </section>
 
+        <section class="grid justify-start">
+            <h2 class='text-5xl font-medium mb-4'>About Us</h2>
+            <p class='mb-8 max-w-screen-lg'>
+                Zoar Valley Software LLC is a software development business founded by Timothy Batt.
+                Specializing in tailored software solutions including websites, automation programs, and IoT systems. 
+                With a focus on local businesses, we aim to provide customized software solutions that elevate efficiency and simplify day-to-day work, 
+                utilizing our diverse technical skills to deliver exceptional outcomes and empower businesses for success.
+            </p>
+        </section>
 
-        <section class="z-20">
-            <h2 class='text-5xl font-medium mb-4' id='contact'>Contact Us</h2>
-            <Form  action='https://api.zoarvalleysoftware.com/contact' method='POST' className='max-w-xl grid gap-4 place-content-center'>
+        <section class="z-20 grid place-items-center lg:place-items-start">
+            <div class='mb-8'>
+                <h2 class='text-5xl font-medium mb-2' id='contact'>Request a Quote</h2>
+                <p>Or send an email directly to <a href='mailto:zoarvalleysoftware@gmail.com' class='underline text-blue-400'>zoarvalleysoftware@gmail.com</a></p>
+            </div>
+            <Form action='https://api.zoarvalleysoftware.com/contact' method='POST' className='max-w-xl grid gap-4 place-content-center'>
                 <fieldset>
                     <label for='message'>Describe what we can do for you:</label><br>
                     <textarea class='mb-4 w-100% min-h-[10rem] h-[100%] text-black' name='message' required></textarea>
@@ -75,7 +87,7 @@ import ServiceCard from '../components/ServiceCard';
                     />
                 </div>
 
-                <button class='btn w-fit bg-primary block font-medium'>Submit Contact Form</button>
+                <button class='btn w-fit bg-primary block font-medium'>Submit Form</button>
             </Form>
         </section>
     </main>
