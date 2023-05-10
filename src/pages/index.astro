@@ -4,6 +4,7 @@ import SimpleHero from '../components/SimpleHero.astro';
 import GridSection from '../components/GridSection';
 import {Input, Form } from '../components/Form';
 import Blur from '../components/Blur';
+import ServiceCard from '../components/ServiceCard';
 ---
 <Layout title='Zoar Valley Software' class='bg-[#0f0f0f] text-white text-lg'>
     
@@ -23,32 +24,26 @@ import Blur from '../components/Blur';
         </div>
     </SimpleHero>  
     
-    <main class='relative overflow-clip px-32 py-16 grid gap-32 place-content-center text-center lg:text-left'>        
-        <GridSection className='z-20'>            
-            <div class="grid place-content-center text-xl">
-                <h2 class='text-6xl font-semibold mb-4'>Web Development</h2>
-                <p>
-                    Creating blogs, marketing & e-commerce sites, or entirely custom web applications, 
-                    we'll ensure you receive a high-quality website that is easy to use and maintain.
-                </p>
+    <main class='relative overflow-clip p-32 grid gap-32 place-content-center text-center lg:text-left'>
+        <section>
+            <h2 class='text-6xl font-semibold text-center mb-16'>Services</h2>
+            <div class="grid md:grid-cols-3 gap-16">
+                <ServiceCard title='Web Development'>
+                    Creating high-quality, user-friendly websites that help you achieve your online goals. 
+                    Whether it's marketing, blogs, e-commerce, or custom web apps, we cover a wide range of needs. 
+                    Stand out in the digital landscape and unlock your online potential with our web development services.
+                </ServiceCard>
+
+                <ServiceCard title='Custom Software'>
+                    Our custom software development services enhance your organization's efficiency, productivity, and revenue. 
+                    We create tailored software solutions to streamline processes, automate workflows, and eliminate manual tasks, improving overall efficiency.
+                </ServiceCard>
+
+                <ServiceCard title='Internet of Things'>
+                    Our tailored IoT solutions optimize processes, manage assets, enhance customer experiences, and unlock new revenue streams. We offer end-to-end IoT implementation, including device integration, connectivity, and advanced data analytics.
+                </ServiceCard>
             </div>
-            
-            <img class='bg-white object-cover' src='/img/soap.png' alt='Image of a guitar website hero-section'/>
-            
-        </GridSection>
-
-
-        <GridSection className='z-20'>
-            <div class="grid place-content-center text-xl">
-                <h2 class='text-6xl font-semibold mb-4'>Automation</h2>
-                <p>
-                    Tired of carrying out monotonus, and repetitive tasks such as data entry or data analysis?
-                    We can develop software to automate these and many more tasks, letting you focus on the things that really matter.
-                </p>
-            </div>
-            <img src='/img/graph.webp' class='lg:[grid-row:1]' alt='Image of a data graph'>
-        </GridSection>
-
+        </section>
 
 
         <section class="z-20">
