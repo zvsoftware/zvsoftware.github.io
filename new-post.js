@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 import fs from 'fs';
 import { exit } from 'process';
 import readline from 'readline';
@@ -23,14 +25,14 @@ function slug(string) {
         .replace(/ +/g,'_');
 }
 
-const title = process.argv[2] || 'Title';
+const title = process.argv[2] || 'New Post';
 const date = new Date().toISOString().split('T')[0];
 const slugTitle = slug(title);
 const content = `\
 ---
 title: ${ title }
 date: ${ date }
-image: /img/blog/posts/${ slugTitle }.png
+image: /img/blog/${ slugTitle }.webp
 ---
 `;
 
