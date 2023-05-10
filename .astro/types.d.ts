@@ -111,9 +111,7 @@ declare module 'astro:content' {
 	>;
 
 	const entryMap: {
-		"blog": {
-},
-
+		
 	};
 
 	type ContentConfig = never;

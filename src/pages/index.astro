@@ -15,7 +15,7 @@ import ServiceCard from '../components/ServiceCard';
         class='bg-[#0007] h-[65vh] justify-start'
         >
         <div slot='cta' class='mt-8'>
-            <a class='btn py-3 px-6 bg-white text-black text-2xl font-medium' href='/#contact'>Get a quote</a>
+            <a class='btn py-2 px-4 md:py-3 md:px-6 bg-white text-black text-xl md:text-2xl font-medium' href='/#contact'>Get a quote</a>
         </div>
 
         <div slot='absolutes' class="w-[100vw] h-[100%] absolute top-0 left-0 overflow-x-clip">
@@ -24,7 +24,7 @@ import ServiceCard from '../components/ServiceCard';
         </div>
     </SimpleHero>  
     
-    <main class='relative overflow-clip px-12 py-32 grid gap-32 place-content-center text-center lg:text-left max-w-screen-2xl mx-auto'>
+    <main class='relative overflow-clip px-8 sm:px-12 py-32 grid gap-32 text-center lg:text-left max-w-screen-2xl mx-auto'>
         <section class='grid place-content-center'>
             <h2 class='text-6xl font-semibold text-center mb-16'>Services</h2>
             <div class="grid lg:grid-cols-3 gap-16">
@@ -40,7 +40,7 @@ import ServiceCard from '../components/ServiceCard';
                 </ServiceCard>
 
                 <ServiceCard title='Internet of Things'>
-                    Our tailored IoT solutions optimize processes, manage assets, enhance customer experiences, and unlock new revenue streams. We offer end-to-end IoT implementation, including device integration, connectivity, and advanced data analytics.
+                    Our tailored IoT solutions optimize processes, enhance customer experiences, and unlock new revenue streams. We offer end-to-end IoT implementation, including device integration, connectivity, and advanced data analytics.
                 </ServiceCard>
             </div>
         </section>
@@ -55,13 +55,13 @@ import ServiceCard from '../components/ServiceCard';
             </p>
         </section>
 
-        <section class="z-20 grid place-items-center lg:place-items-start">
+        <section class="z-20 grid place-content-center">
             <div class='mb-8'>
                 <h2 class='text-5xl font-medium mb-2' id='contact'>Request a Quote</h2>
                 <p>Or send an email directly to <a href='mailto:zoarvalleysoftware@gmail.com' class='underline text-blue-400'>zoarvalleysoftware@gmail.com</a></p>
             </div>
-            <Form action='https://api.zoarvalleysoftware.com/contact' method='POST' className='max-w-xl grid gap-4 place-content-center'>
-                <fieldset>
+            <Form action='https://api.zoarvalleysoftware.com/contact' method='POST'>
+                <fieldset class='w-100%'>
                     <label for='message'>Describe what we can do for you:</label><br>
                     <textarea class='mb-4 w-100% min-h-[10rem] h-[100%] text-black' name='message' required></textarea>
                 </fieldset>
@@ -87,7 +87,7 @@ import ServiceCard from '../components/ServiceCard';
                     />
                 </div>
 
-                <button class='btn w-fit bg-primary block font-medium'>Submit Form</button>
+                <button class='mx-auto md:mx-0 btn w-fit bg-primary block font-medium'>Submit Form</button>
             </Form>
         </section>
     </main>
