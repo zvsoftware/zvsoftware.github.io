@@ -112,16 +112,16 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"blog": {
-"first.md": {
-  id: "first.md",
-  slug: "first",
+"making_a_blog_with_astrojs.md": {
+  id: "making_a_blog_with_astrojs.md",
+  slug: "making_a_blog_with_astrojs",
   body: string,
   collection: "blog",
   data: any
 } & { render(): Render[".md"] },
-"second.md": {
-  id: "second.md",
-  slug: "second",
+"test.md": {
+  id: "test.md",
+  slug: "test",
   body: string,
   collection: "blog",
   data: any
