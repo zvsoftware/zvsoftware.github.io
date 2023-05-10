@@ -4,8 +4,13 @@ export function PostLink({ post }) {
     const postLink = `/blog/${ post.slug }`;
     const truncatedBody = post.body.substring(0, 100) + `...`;
     return ( 
-        <section className='py-4 grid grid-cols-4 gap-8 place-items-center border-t border-gray-300'>
-            <img src="/img/code.webp" class='hidden md:block [grid-column:1] min-w-[7rem] w-60 aspect-square rounded object-cover' alt="" />
+        <section className='py-4 flex gap-8 border-t border-gray-300'>
+            {
+                post.data.image 
+                ? <img src={ post.data.image } class='hidden md:block [grid-column:1] min-w-[7rem] w-60 aspect-square rounded object-cover' alt="" />
+                : ''
+            }
+            
             <div className='md:[grid-column:2/-1] [grid-column:1/-1]'>
                 <h2 className='text-3xl font-medium'>
                     <a class='hover:underline' href={ postLink }>{ post.data.title }</a>

@@ -1,5 +1,9 @@
 ---
 title: Post 2
+description: "
+This is the post description.
+"
+image: '/img/code.webp'
 ---
 
 
