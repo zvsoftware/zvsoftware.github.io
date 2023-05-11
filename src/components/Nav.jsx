@@ -9,7 +9,7 @@ export default function Nav(props) {
                     <span className='hidden sm:block'>Zoar Valley Software</span>
                 </a>
             <a href="/#contact" className='text-xl underline'>Contact</a>
-            <a href="/blog" className='text-xl underline'>Blog</a>
+            {/* <a href="/blog" className='text-xl underline'>Blog</a> */}
         </nav>
     );
 }
