@@ -2,7 +2,12 @@ import ReactMarkdown from 'react-markdown';
 
 export function PostLink({ post }) {
     const postLink = `/blog/${ post.slug }`;
-    const truncatedBody = post.body.substring(0, 100) + `...`;
+    let hasTruncated = false;
+    if (post.body.length > 280) {
+        post.body = post.body.substring(0, 280) + `...`;
+        hasTruncated = true;
+    }
+    
     return ( 
         <section className='py-4 flex gap-8 border-t border-gray-300'>
             {
@@ -19,10 +24,15 @@ export function PostLink({ post }) {
 
                 <article className='w-100%'>
                     <ReactMarkdown className='inline-block mb-4'>
-                        { truncatedBody }
+                        { post.body }
                     </ReactMarkdown>
 
-                    <a href={ postLink } className='block w-fit p-2 border bg-slate-100 hover:bg-slate-50'>Read More</a>
+                    { 
+                        hasTruncated
+                        ? <a href={ postLink } className='block w-fit p-2 border bg-slate-100 hover:bg-slate-50'>Read More</a>
+                        : ''
+                    }
+
                 </article>
             </div>
         </section>
