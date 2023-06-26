@@ -3,6 +3,8 @@ import ReactMarkdown from 'react-markdown';
 export function PostLink({ post }) {
     const postLink = `/blog/${ post.slug }`;
     let hasTruncated = false;
+
+    // Functionize this
     if (post.body.length > 280) {
         post.body = post.body.substring(0, 280) + `...`;
         hasTruncated = true;
@@ -10,6 +12,8 @@ export function PostLink({ post }) {
     
     return ( 
         <section className='py-4 flex gap-8 border-t border-gray-300'>
+
+            {/* Componentize this */}
             {
                 post.data.image 
                 ? <img src={ post.data.image } class='hidden md:block [grid-column:1] min-w-[7rem] w-60 aspect-square rounded object-cover' alt="" />
@@ -27,6 +31,7 @@ export function PostLink({ post }) {
                         { post.body }
                     </ReactMarkdown>
 
+                    {/* Componentize this */}
                     { 
                         hasTruncated
                         ? <a href={ postLink } className='block w-fit p-2 border bg-slate-100 hover:bg-slate-50'>Read More</a>

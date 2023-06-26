@@ -1,20 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SimpleHero from '../components/SimpleHero.astro';
-import GridSection from '../components/GridSection';
-import {Input, Form } from '../components/Form';
 import Blur from '../components/Blur';
 import ServiceCard from '../components/ServiceCard';
+import ContactSection from "../components/index/ContactSection";
+import AboutSection from "../components/index/AboutSection";
 ---
-<style>
-#test {background-color: #0074bc;}
-</style>
+
+
 <Layout title='Zoar Valley Software' class='bg-[#0f0f0f] text-white text-lg'>
     <div class='z-10 relative overflow-x-clip'>
         <!-- Hero blur -->
         <Blur className='bg-[#3489fbd9] w-[80rem] h-[45rem] -left-[10rem] -top-[15rem] rounded-sm' />
     </div>
     
+    <!-- Componentize Hero -->
     <SimpleHero
         header='Taking your ideas to the next level.'
         title='Zoar Valley Software LLC'
@@ -31,6 +31,8 @@ import ServiceCard from '../components/ServiceCard';
     </SimpleHero>  
     
     <main class='z-20 relative px-8 sm:px-12 py-32 grid gap-32 text-center lg:text-left max-w-screen-2xl mx-auto'>
+        
+        <!-- Componentize Services -->
         <section class='grid place-content-center'>
             <h2 class='text-6xl font-semibold text-center mb-16'>Services</h2>
             <div class="grid lg:grid-cols-3 gap-16">
@@ -51,50 +53,8 @@ import ServiceCard from '../components/ServiceCard';
             </div>
         </section>
 
-        <section class="grid justify-start">
-            <h2 class='text-5xl font-medium mb-4'>About Us</h2>
-            <p class='mb-8 max-w-screen-lg'>
-                Zoar Valley Software LLC is a software development business founded by Timothy Batt.
-                Specializing in tailored software solutions including websites, automation programs, and IoT systems. 
-                With a focus on local businesses, we aim to provide customized software solutions that elevate efficiency and simplify day-to-day work, 
-                utilizing our diverse technical skills to deliver exceptional outcomes and empower businesses for success.
-            </p>
-        </section>
+        <AboutSection/>
 
-        <section class="z-20 grid place-content-center">
-            <div class='mb-8'>
-                <h2 class='text-5xl font-medium mb-2' id='contact'>Request a Quote</h2>
-                <p>Or send an email directly to <a href='mailto:zoarvalleysoftware@gmail.com' class='underline text-blue-400'>zoarvalleysoftware@gmail.com</a></p>
-            </div>
-            <Form action='https://api.zoarvalleysoftware.com/contact' method='POST'>
-                <fieldset class='w-100%'>
-                    <label for='message'>Describe what we can do for you:</label><br>
-                    <textarea class='mb-4 w-100% min-h-[10rem] h-[100%] text-black' name='message' required></textarea>
-                </fieldset>
-
-                <div class='grid place-content-center md:grid-cols-2 gap-8 mb-8'>
-                    <Input 
-                        name='name' 
-                        label='Your name:'
-                        type='text'
-                    />
-
-                    <Input 
-                        name='email' 
-                        label='Your email:'
-                        type='email'
-                    />
-                    
-                    <Input 
-                        name='company' 
-                        label='Your company name (optional):'
-                        type='text'
-                        required={ false }
-                    />
-                </div>
-
-                <button class='mx-auto md:mx-0 btn w-fit bg-primary block font-medium'>Submit Form</button>
-            </Form>
-        </section>
+        <ContactSection/>
     </main>
 </Layout>
