@@ -1,6 +1,5 @@
 import { Form, Input } from '../Form';
 
-
 export function ContactForm() {
     return (
     <Form action='https://api.zoarvalleysoftware.com/contact' method='POST'>

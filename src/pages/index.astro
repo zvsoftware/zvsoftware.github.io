@@ -1,10 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import SimpleHero from '../components/SimpleHero.astro';
+import HeroSection from "../components/index/HeroSection.astro";
 import Blur from '../components/Blur';
-import ServiceCard from '../components/ServiceCard';
+import ServicesSection from "../components/index/ServicesSection.astro";
 import ContactSection from "../components/index/ContactSection";
-import AboutSection from "../components/index/AboutSection";
+import AboutSection from "../components/index/AboutSection.astro";
 ---
 
 
@@ -13,48 +13,14 @@ import AboutSection from "../components/index/AboutSection";
         <!-- Hero blur -->
         <Blur className='bg-[#3489fbd9] w-[80rem] h-[45rem] -left-[10rem] -top-[15rem] rounded-sm' />
     </div>
-    
-    <!-- Componentize Hero -->
-    <SimpleHero
-        header='Taking your ideas to the next level.'
-        title='Zoar Valley Software LLC'
-        bgImgSrc='/img/pages/home_hero.webp'
-        class='bg-[#0007] h-[65vh] justify-start'
-        >
-        <div slot='cta' class='mt-8'>
-            <a class='btn py-2 px-4 md:py-3 md:px-6 bg-white text-black text-xl md:text-2xl font-medium' href='/#contact'>Get a quote</a>
-        </div>
 
-        <div slot='absolutes' class="w-[100vw] h-[100%] absolute top-0 left-0 overflow-x-clip">
-            <div class='bg-gradient-to-b from-transparent to-[#0f0f0f] h-32 w-100% absolute bottom-0'></div>
-        </div>
-    </SimpleHero>  
+    <HeroSection/>
     
     <main class='z-20 relative px-8 sm:px-12 py-32 grid gap-32 text-center lg:text-left max-w-screen-2xl mx-auto'>
-        
-        <!-- Componentize Services -->
-        <section class='grid place-content-center'>
-            <h2 class='text-6xl font-semibold text-center mb-16'>Services</h2>
-            <div class="grid lg:grid-cols-3 gap-16">
-                <ServiceCard title='Web Development' className='shadow-xl shadow-green-500'>
-                    Creating high-quality, user-friendly websites that help you achieve your online goals. 
-                    Whether it's marketing, blogs, e-commerce, or custom web apps, we cover a wide range of needs. 
-                    Stand out in the digital landscape and unlock your online potential with our web development services.
-                </ServiceCard>
-
-                <ServiceCard title='Custom Software' className='shadow-xl shadow-teal-500'>
-                    Our custom software development services enhance your organization's efficiency, productivity, and revenue. 
-                    We create tailored software solutions to streamline processes, automate workflows, and eliminate manual tasks, improving overall efficiency.
-                </ServiceCard>
-
-                <ServiceCard title='Internet of Things' className='shadow-xl shadow-blue-500'>
-                    Our tailored IoT solutions optimize processes, enhance customer experiences, and unlock new revenue streams. We offer end-to-end IoT implementation, including device integration, connectivity, and advanced data analytics.
-                </ServiceCard>
-            </div>
-        </section>
-
-        <AboutSection/>
+        <ServicesSection/>
 
         <ContactSection/>
+        
+        <AboutSection/>
     </main>
 </Layout>

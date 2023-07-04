@@ -1,0 +1,19 @@
+---
+import SimpleHero from '../SimpleHero.astro';
+---
+
+
+<SimpleHero
+    header='Taking your ideas to the next level.'
+    title='Zoar Valley Software LLC'
+    bgImgSrc='/img/pages/home_hero.webp'
+    class='bg-[#0007] h-[65vh] justify-start'
+>
+    <div slot='cta' class='mt-8'>
+        <a class='btn py-2 px-4 md:py-3 md:px-6 bg-white text-black text-xl md:text-2xl font-medium' href='/#contact'>Get a quote</a>
+    </div>
+
+    <div slot='absolutes' class="w-[100vw] h-[100%] absolute top-0 left-0 overflow-x-clip">
+        <div class='bg-gradient-to-b from-transparent to-[#0f0f0f] h-32 w-100% absolute bottom-0'></div>
+    </div>
+</SimpleHero>  
