@@ -7,16 +7,24 @@ body {
 }
 
 .slider {
-    width: 100%;
+    width: 40rem;
     min-height: 400px;
     display: flex;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: mandatory;
+
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+}
+
+.slider::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 
 .slide {
-    width: 33vw;
+    width: 40rem;
     flex-shrink: 0;
 }
 
