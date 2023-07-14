@@ -1,16 +1,14 @@
 export function SlideButton(props) {
     function handleClick(e) {
-        console.log("HERE!");
         e.preventDefault();
         e.stopPropagation();
 
         const y = window.scrollY;
-        console.log(y);
         document.querySelector(`${ props.href }`).scrollIntoView();
         window.scrollTo(0, y);
     }
 
-    return <a { ...props } class='bg-slate-200 w-3 aspect-square inline-block rounded-full' onClick={ handleClick }></a>
+    return <a { ...props } className='bg-slate-200 w-3 aspect-square inline-block rounded-full' onClick={ handleClick }></a>
 }
 
 export default function SlideButtons() {
