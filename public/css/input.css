@@ -12,9 +12,9 @@ body {
     display: flex;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: mandatory;
+    scroll-snap-type: x mandatory;
 
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
     -ms-overflow-style: none;
 }
 
@@ -26,6 +26,7 @@ body {
 .slide {
     width: 40rem;
     flex-shrink: 0;
+    scroll-snap-align: center;
 }
 
 
