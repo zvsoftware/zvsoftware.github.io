@@ -2,32 +2,40 @@
 import Review from '../Review';
 ---
 
-<section class='grid grid-cols-4 place-items-center gap-4'>
-    <Review 
-        author='Jehu Alexander'
-        review="Excellent working with this person. On time delivery. Responds quickly, hard working, efficient and meets your needs. I would definitely recommend working with him. I've dealt with quite a few people in this field and I’ve had the best experience and final product with him."
-        rating={ 5 }
-    />
-
+<section class='text-left w-[100vw]'>
+    <h1 class='text-3xl m-4'>What People Say about us</h1>
     
-    <Review 
-    author='Joseph'
-    review="Tim came up with several ideas for improving my site's design and I'm happy I went with him on this project. He was very responsive, easy to talk to, and he made sure that I was fully satisfied before we marked this project complete. I highly recommend him."
-    rating={ 5 }
-    />
-    
-    <Review 
-        author='jj_writer'
-        review="He is very easy to chat with - VERY good at getting the coding done fast - and communicates well. I strongly recommend x 10."
-        rating={ 5 }
-    />
-    
-    <Review 
-        author='Keith Robideu' 
-        company='Florida State Golf Association'
-        review='Good developer - and adept at listening to the business requirements.' 
-        rating={ 5 }
-    />
+    <div class='slider'>
 
-
+        <Review 
+            author='Jehu Alexander'
+            review="Excellent working with this person. On time delivery. Responds quickly, hard working, efficient and meets your needs. I would definitely recommend working with him. I've dealt with quite a few people in this field and I’ve had the best experience and final product with him."
+            rating={ 5 }
+            className='slide'
+        />
+    
+        <Review 
+            author='Keith Robideu' 
+            company='Florida State Golf Association'
+            review='Good developer - and adept at listening to the business requirements.' 
+            rating={ 5 }
+            className='slide'
+        />
+    
+        
+        <Review 
+            author='Joseph'
+            review="Tim came up with several ideas for improving my site's design and I'm happy I went with him on this project. He was very responsive, easy to talk to, and he made sure that I was fully satisfied before we marked this project complete. I highly recommend him."
+            rating={ 5 }
+            className='slide'
+        />
+        
+        <Review 
+            author='jj_writer'
+            review="He is very easy to chat with - VERY good at getting the coding done fast - and communicates well. I strongly recommend x 10."
+            rating={ 5 }
+            className='slide'
+        />
+    </div>
+    
 </section>

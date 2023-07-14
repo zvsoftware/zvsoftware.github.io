@@ -6,6 +6,25 @@ body {
     background-color: #f4f4f4;
 }
 
+.slider {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: mandatory;
+}
+
+.slide {
+    width: 33vw;
+    flex-shrink: 0;
+}
+
+
+.contain {
+    @apply px-8 sm:px-12;
+}
+
 @layer base {
     .markdown * {
         @apply mb-8
