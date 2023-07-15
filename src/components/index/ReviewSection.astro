@@ -3,13 +3,11 @@ import Review from '../Review';
 import SlideButtons from "../SlideButtons";
 ---
 
-<section class='text-left w-[100vw] grid grid-cols-2 place-content-center'>
+<section class='py-20 text-left w-[100vw] grid grid-cols-2 place-items-center'>
     <section class='p-32 grid place-content-center'>
-        <h1 class='text-4xl font-medium mb-4 max-w-screen-sm'>
+        <h1 class='text-5xl font-medium mb-4 max-w-screen-sm'>
             Exceptional service, on-time delivery, and client satisfaction guaranteed.
         </h1>
-
-        <p>We have what it takes</p>
     </section>
     <section class='relative w-fit h-fit'>
         <div class='slider'>
@@ -17,7 +15,7 @@ import SlideButtons from "../SlideButtons";
                 author='Jehu Alexander'
                 rating={ 5 }
                 className='slide'
-                id='slide-1'
+                id='slide-0'
             >
                 Excellent working with this person. On time delivery. Responds quickly, hard working, efficient and meets your needs. I would definitely recommend working with him. I've dealt with quite a few people in this field and I’ve had the best experience and final product with him.
             </Review>
@@ -27,7 +25,7 @@ import SlideButtons from "../SlideButtons";
                 company='Florida State Golf Association' 
                 rating={ 5 }
                 className='slide'
-                id='slide-2'
+                id='slide-1'
             >
                 Good developer - and adept at listening to the business requirements.
             </Review>
@@ -36,7 +34,7 @@ import SlideButtons from "../SlideButtons";
                 author='Joseph'
                 rating={ 5 }
                 className='slide'
-                id='slide-3'
+                id='slide-2'
             >
                 Tim came up with several ideas for improving my site's design and I'm happy I went with him on this project. He was very responsive, easy to talk to, and he made sure that I was fully satisfied before we marked this project complete. I highly recommend him.    
             </Review>
@@ -45,14 +43,14 @@ import SlideButtons from "../SlideButtons";
                 author='jj_writer'
                 rating={ 5 }
                 className='slide'
-                id='slide-4'
+                id='slide-3'
             >
                 He is very easy to chat with - VERY good at getting the coding done fast - and communicates well. I strongly recommend x 10.
             </Review>
         </div>
 
         <div class='absolute bottom-5 left-[50%] translate-x-[-50%]'>
-            <SlideButtons client:only/>
+            <SlideButtons count={4} client:only/>
         </div>
     </section>
     
