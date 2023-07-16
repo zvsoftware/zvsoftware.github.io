@@ -2,12 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root {
+    --slide-width: clamp(10rem, 30vw, 40rem);
+}
+
 body {
     background-color: #f4f4f4;
 }
 
 .slider {
-    width: 40rem;
+    width: var(--slide-width);
     min-height: 400px;
     display: flex;
     overflow-x: auto;
@@ -25,7 +30,7 @@ body {
 }
 
 .slide {
-    width: 40rem;
+    width: var(--slide-width);
     flex-shrink: 0;
     scroll-snap-align: center;
 }
