@@ -1,6 +1,9 @@
 ---
 import Review from '../Review';
 import SlideButtons from "../SlideButtons";
+import reviewsJson from "../../json/reviews.json";
+
+const reviews = reviewsJson.reviews;
 ---
 
 <section class='md:py-20 text-left grid xl:grid-cols-2 place-items-center'>
@@ -10,49 +13,24 @@ import SlideButtons from "../SlideButtons";
         </h1>
     </section>
     
-    <section class='relative '>
+    <section class='relative'>
         <div class='slider'>
-            <Review 
-                author='Jehu Alexander'
-                rating={ 5 }
-                className='slide'
-                id='slide-0'
-            >
-                Excellent working with this person. On time delivery. Responds quickly, hard working, efficient and meets your needs. I would definitely recommend working with him. I've dealt with quite a few people in this field and I've had the best experience and final product with him.
-            </Review>
-        
-            <Review 
-                author='Keith Robideu' 
-                company='Florida State Golf Association' 
-                rating={ 5 }
-                className='slide'
-                id='slide-1'
-            >
-                Good developer - and adept at listening to the business requirements.
-            </Review>
-        
-            <Review 
-                author='Joseph'
-                rating={ 5 }
-                className='slide'
-                id='slide-2'
-            >
-                Tim came up with several ideas for improving my site's design and I'm happy I went with him on this project. He was very responsive, easy to talk to, and he made sure that I was fully satisfied before we marked this project complete. I highly recommend him.    
-            </Review>
-            
-            <Review 
-                author='jj_writer'
-                rating={ 5 }
-                className='slide'
-                id='slide-3'
-            >
-                He is very easy to chat with - VERY good at getting the coding done fast - and communicates well. I strongly recommend x 10.
-            </Review>
+            { 
+            reviews.map((review, i) => {
+                return <Review
+                    author={ review.author }
+                    company={ review.company }
+                    rating={ review.rating }
+                    className='slide'
+                    id={`slide-${ i }`}>
+                    { review.review }
+                </Review> 
+            })
+            }
         </div>
-
+            
         <div class='absolute bottom-5 left-[50%] translate-x-[-50%]'>
-            <SlideButtons count={4} client:only/>
+            <SlideButtons count={ reviews.length } client:only/>
         </div>
     </section>
-    
 </section>
