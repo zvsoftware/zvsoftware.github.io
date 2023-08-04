@@ -11,7 +11,7 @@ import ReviewSection from '../components/index/ReviewSection.astro';
 
 
 <Layout title='Zoar Valley Software' class='bg-[#0f0f0f] text-white text-lg'>
-    <div class='z-10 relative overflow-x-clip'>
+    <div class='z-10 relative overflow-x-clip w-[100vw]'>
         <!-- Hero blur -->
         <Blur className='bg-[#3489fbd9] w-[80rem] h-[45rem] -left-[10rem] -top-[15rem] rounded-sm' />
     </div>
@@ -21,10 +21,12 @@ import ReviewSection from '../components/index/ReviewSection.astro';
     <main class='py-32 z-20 relative grid gap-32 text-center lg:text-left max-w-screen-xl'>
         <ReviewSection/>
         
-        <ServicesSection/>
-        
-        <ContactSection/>
-        
-        <AboutSection/>
+        <section class='mx-auto grid gap-32'>
+            <ServicesSection/>
+            
+            <ContactSection/>
+            
+            <AboutSection/>
+        </section>
     </main>
 </Layout>
