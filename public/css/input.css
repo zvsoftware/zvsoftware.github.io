@@ -4,7 +4,8 @@
 
 
 :root {
-    --slide-width: clamp(10rem, 30vw, 40rem);
+    --slide-width: 100vw;
+    --slide-height: 300px;
 }
 
 body {
@@ -14,7 +15,7 @@ body {
 .slider {
     isolation: isolate;
     width: var(--slide-width);
-    min-height: 400px;
+    min-height: var(--slide-height);
     display: flex;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -34,8 +35,13 @@ body {
     width: var(--slide-width);
     flex-shrink: 0;
     scroll-snap-align: center;
+    display: grid;
+    place-items: center;
 }
 
+.slide * {
+    max-width: 70ch;
+}
 
 .contain {
     @apply px-8 sm:px-12;

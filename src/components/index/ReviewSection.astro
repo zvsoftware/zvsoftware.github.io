@@ -6,31 +6,22 @@ import reviewsJson from "../../json/reviews.json";
 const reviews = reviewsJson.reviews;
 ---
 
-<section class='md:py-20 text-left grid xl:grid-cols-2 place-items-center'>
-    <section class='grid place-items-center max-w-[35rem]'>
-        <h1 class='text-5xl font-medium mb-8 text-center xl:text-left'>
-            Exceptional service, on-time delivery, and client satisfaction guaranteed.
-        </h1>
-    </section>
-    
-    <section class='relative'>
-        <div class='slider'>
-            { 
-            reviews.map((review, i) => {
-                return <Review
-                    author={ review.author }
-                    company={ review.company }
-                    rating={ review.rating }
-                    className='slide'
-                    id={`slide-${ i }`}>
-                    { review.review }
+<section class='relative grid place-content-center border-y border-gray-700'>
+    <div class='slider pb-6'>
+        { 
+        reviews.map((review, i) => {
+            return <Review
+                author={ review.author }
+                company={ review.company }
+                rating={ review.rating }
+                className='slide'
+                id={`slide-${ i }`}>
+                { review.review }
                 </Review> 
             })
-            }
-        </div>
-            
+        }
         <div class='absolute bottom-5 left-[50%] translate-x-[-50%]'>
             <SlideButtons count={ reviews.length } client:only/>
         </div>
-    </section>
+    </div>
 </section>
