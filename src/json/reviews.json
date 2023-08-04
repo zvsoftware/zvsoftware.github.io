@@ -1,0 +1,23 @@
+{
+    "reviews": [
+        {
+            "author": "Keith Robideu",
+            "rating": 5,
+            "review": "Good developer - and adept at listening to the business requirements.",
+            "company": "Florida State Golf Association"
+        },
+        
+        {
+            "author": "Jehu Alexander",
+            "rating": 5,
+            "review": "Excellent working with this person. On time delivery. Responds quickly, hard working, efficient and meets your needs. I would definitely recommend working with him. I've dealt with quite a few people in this field and I've had the best experience and final product with him."
+        },
+
+
+        {
+            "author": "jj_writer",
+            "rating": 5,
+            "review": "He is very easy to chat with - VERY good at getting the coding done fast - and communicates well. I strongly recommend x 10."
+        }
+    ]
+}

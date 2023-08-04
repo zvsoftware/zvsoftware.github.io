@@ -1,0 +1,27 @@
+---
+import Review from '../Review';
+import SlideButtons from "../SlideButtons";
+import reviewsJson from "../../json/reviews.json";
+
+const reviews = reviewsJson.reviews;
+---
+
+<section class='relative grid place-content-center border-y border-gray-700'>
+    <div class='slider pb-6'>
+        { 
+        reviews.map((review, i) => {
+            return <Review
+                author={ review.author }
+                company={ review.company }
+                rating={ review.rating }
+                className='slide'
+                id={`slide-${ i }`}>
+                { review.review }
+                </Review> 
+            })
+        }
+        <div class='absolute bottom-5 left-[50%] translate-x-[-50%]'>
+            <SlideButtons count={ reviews.length } client:only/>
+        </div>
+    </div>
+</section>

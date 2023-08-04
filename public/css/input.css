@@ -2,8 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root {
+    --slide-width: 100vw;
+    --slide-height: 300px;
+}
+
 body {
     background-color: #f4f4f4;
+}
+
+.slider {
+    isolation: isolate;
+    width: var(--slide-width);
+    min-height: var(--slide-height);
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.slider::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.slide {
+    width: var(--slide-width);
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    display: grid;
+    place-items: center;
+}
+
+.slide * {
+    max-width: 70ch;
+}
+
+.contain {
+    @apply px-8 sm:px-12;
 }
 
 @layer base {

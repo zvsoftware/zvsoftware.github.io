@@ -21,7 +21,7 @@ export function ContactForm() {
 
 export default function ContactSection() {
     return (
-    <section aria-label='Contact Form' class="z-20 md:text-left grid place-content-center md:place-content-start">
+    <section aria-label='Contact Form' class="z-20 md:text-left grid place-content-center md:place-content-start contain">
         <div class='mb-8'>
             <h2 class='text-5xl font-medium mb-2' id='contact'>Request a Quote</h2>
             <p>Or send an email directly to <a href='mailto:zoarvalleysoftware@gmail.com' class='underline text-blue-400'>zoarvalleysoftware@gmail.com</a></p>
