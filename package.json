@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev & npm run css",
+    "dev": "astro dev --host & npm run css",
     "start": "astro dev & npm run css",
     "css": "npx tailwindcss -i ./public/css/input.css -o ./public/css/tailwind.css --watch --minify",
     "build": "astro build",

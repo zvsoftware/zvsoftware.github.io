@@ -30,7 +30,7 @@ export default function SlideButtons(props) {
             const slideNum = scrollOffset / slideWidth;
             setActiveSlide(slideNum);
         }
-    })
+    });
 
     useEffect(() => {
         const btns = [];
