@@ -23,5 +23,26 @@ const { title, nav, class: className } = Astro.props;
 	<body class={`${ className } overflow-x-clip relative`}>
 		{ nav !== false ? <Nav/> : '' }
 		<slot/>
+
+
+		<script type="application/ld+json">
+			{
+			  "@context": "https://schema.org",
+			  "@type": "LocalBusiness",
+			  "name": "Zoar Valley Software LLC",
+			  "image": "",
+			  "@id": "https://www.zoarvalleysoftware.com/",
+			  "url": "https://www.zoarvalleysoftware.com/",
+			  "telephone": "7162291732",
+			  "address": {
+				"@type": "PostalAddress",
+				"streetAddress": "",
+				"addressLocality": "Gowanda",
+				"addressRegion": "NY",
+				"postalCode": "14070",
+				"addressCountry": "US"
+			  }  
+			}
+		</script>
 	</body>
 </html>
