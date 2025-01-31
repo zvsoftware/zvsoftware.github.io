@@ -6,5 +6,8 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://zoarvalleysoftware.com',
-  integrations: [mdx(), react()]
+  integrations: [
+    mdx(), 
+    react()
+  ]
 });
