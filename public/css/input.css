@@ -6,10 +6,26 @@
 :root {
     --slide-width: 100vw;
     --slide-height: 300px;
+
+
+    --dark: #252525;
+    --light: #f9f9f9;
+    --color-cta: #0051ad;
 }
 
 body {
     background-color: #f4f4f4;
+}
+
+
+.section__content {
+    max-width: 1600px;
+    margin-inline: auto;
+}
+
+.full-width {
+    max-width: 100%;
+    width: 100%;
 }
 
 .slider {
@@ -96,6 +112,20 @@ body {
 
     .w-100\% {
         width: 100%;
+    }
+
+    .bg-light {
+        background-color: var(--light);
+        color: #000;
+    }
+    
+    .bg-dark {
+        background-color: var(--dark);
+        color: var(--white);
+    }
+    
+    .h2 {
+        @apply text-4xl font-bold mb-2;
     }
 }
 

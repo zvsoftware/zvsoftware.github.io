@@ -1,23 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HeroSection from "../components/index/HeroSection.astro";
-import Blur from '../components/Blur';
 import ServicesSection from "../components/index/ServicesSection.astro";
 import ContactSection from "../components/index/ContactSection";
-import ReviewSection from '../components/index/ReviewSection.astro';
+import Section from "../components/Section.astro";
 ---
 
 
 <Layout title='Zoar Valley Software' class='bg-[#0f0f0f] text-white text-lg'>
-    <div class='z-10 relative overflow-x-clip w-[100vw]'>
-        <!-- Hero blur -->
-        <Blur className='bg-[#3489fbd9] w-[80rem] h-[45rem] -left-[10rem] -top-[15rem] rounded-sm' />
-    </div>
-
     <HeroSection/>
 
-    <main class='py-32 z-20 relative grid gap-32 text-center lg:text-left max-w-screen-xl'>
-        <ReviewSection/>
+    <Section class="bg-light">
+        <h2 class="h2">Why Choose Us?</h2>
+        <p>
+            We combine technical excellence with business understanding to deliver websites that perform.  Our team transforms your vision into an engaging digital experience that drives results. 
+            Whether you need a complete website redesign, performance optimization, or technical support for your existing WordPress site, we have the skills to help your business thrive online.
+        </p>
+        
+        <p>Contact us today to discuss how we can elevate your web presence.</p>
+    </Section>
+
+
+    <main id="#content" class='py-32 z-20 relative grid gap-32 text-center lg:text-left max-w-screen-xl'>
+        
         
         <section class='mx-auto grid gap-32'>
             <ServicesSection/>
