@@ -10,12 +10,24 @@
 
     --dark: #252525;
     --light: #f9f9f9;
+    --mid: #f0f0ff;
     --color-cta: #0051ad;
 }
 
 body {
     background-color: #f4f4f4;
+    color: #000;
 }
+
+
+ul {
+    list-style: inside;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
 
 
 .section__content {
@@ -61,6 +73,16 @@ body {
 
 .contain {
     @apply px-8 sm:px-12;
+}
+
+.card {
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px 2px #000a;
+}
+
+.card__title {
+    text-align: center;
 }
 
 @layer base {
@@ -118,14 +140,30 @@ body {
         background-color: var(--light);
         color: #000;
     }
+
+    .bg-mid {
+        background-color: var(--mid);
+        color: #000;
+    }
     
     .bg-dark {
         background-color: var(--dark);
-        color: var(--white);
+        color: #fff;
     }
+
+    .bg-white {
+        background-color: #fff;
+        color: #000;
+    }
+
+    
     
     .h2 {
         @apply text-4xl font-bold mb-2;
+    }
+
+    .h3 {
+        @apply text-2xl font-bold mb-2;
     }
 }
 
