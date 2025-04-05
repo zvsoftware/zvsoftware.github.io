@@ -11,7 +11,7 @@ export default function Nav(props) {
                 </div>
                 
                 <div>
-                    <a href="mailto:zoarvalleysoftware@gmail.com" class="text-blue-700 font-bold">zoarvalleysoftware@gmail.com</a>
+                    <a href="#contact" class="font-bold btn--cta">Contact</a>
                 </div>
                 
             {/* <a href="/blog" className='text-xl underline'>Blog</a> */}
