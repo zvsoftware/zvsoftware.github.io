@@ -5,7 +5,7 @@ export interface Props {
 	title: string;
 	nav?: boolean,
 	class?: string | null;
-	noIndex: boolean;
+	noIndex?: boolean;
 }
 
 const { title, nav, noIndex, class: className } = Astro.props;
