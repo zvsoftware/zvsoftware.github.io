@@ -5,9 +5,10 @@ export interface Props {
 	title: string;
 	nav?: boolean,
 	class?: string | null;
+	noIndex: boolean;
 }
 
-const { title, nav, class: className } = Astro.props;
+const { title, nav, noIndex, class: className } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -17,6 +18,8 @@ const { title, nav, class: className } = Astro.props;
 		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
 		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 		<meta name="description" content="Custom software development services to enhance your organization's efficiency, productivity, and revenue. Based out of Gowanda, New York.">
+		{ noIndex ? <meta name="robots" content="noindex,nofollow" /> : <meta name="robots" content="index,follow" />}
+		
 		<title>{ title }</title>
 		<link rel='stylesheet' href='/css/tailwind.css'/>
 	</head>
@@ -27,9 +30,9 @@ const { title, nav, class: className } = Astro.props;
 
 		<footer class="bg-dark text-white text-center py-24">
 			<p class='font-bold'>Zoar Valley Software LLC &copy; {new Date().getFullYear()}<br/></p>
-			<!-- <div class="text-sm text-gray-400">
+			<div class="text-sm text-gray-400">
 				<a href="/attribution">Image Attribution</a>
-			</div> -->
+			</div>
 		</footer>
 
 		<script type="application/ld+json">
@@ -37,7 +40,7 @@ const { title, nav, class: className } = Astro.props;
 			  "@context": "https://schema.org",
 			  "@type": "LocalBusiness",
 			  "name": "Zoar Valley Software LLC",
-			  "image": "",
+			  "image": "https://www.zoarvalleysoftware.com/img/logo.svg",
 			  "@id": "https://www.zoarvalleysoftware.com/",
 			  "url": "https://www.zoarvalleysoftware.com/",
 			  "email": "zoarvalleysoftware@gmail.com",
