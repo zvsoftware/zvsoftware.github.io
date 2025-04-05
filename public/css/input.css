@@ -32,6 +32,7 @@ p {
 
 .section__content {
     max-width: 1600px;
+    width: 100%; 
     margin-inline: auto;
 }
 
@@ -40,39 +41,13 @@ p {
     width: 100%;
 }
 
-.slider {
-    isolation: isolate;
-    width: var(--slide-width);
-    min-height: var(--slide-height);
-    display: flex;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.slider::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-}
-
-.slide {
-    width: var(--slide-width);
-    flex-shrink: 0;
-    scroll-snap-align: center;
-    display: grid;
-    place-items: center;
-}
-
-.slide * {
-    max-width: 70ch;
-}
 
 .contain {
     @apply px-8 sm:px-12;
+}
+
+.section {
+    @apply md:py-24 py-16;
 }
 
 .card {
@@ -190,12 +165,5 @@ p {
 
     .link {
         @apply text-blue-700 underline active:text-blue-500 visited:text-blue-900;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .section {
-        padding-inline: 0rem; /* For mobile, reduce padding */
-        padding-block: 40px;
     }
 }

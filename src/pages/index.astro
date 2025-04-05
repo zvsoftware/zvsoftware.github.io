@@ -1,15 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import HeroSection from "../components/index/HeroSection.astro";
+import SimpleHero from "../components/SimpleHero.astro";
 import Section from "../components/Section.astro";
 ---
 
 
 <Layout title='Zoar Valley Software' class='bg-dark text-white text-lg'>
-    <HeroSection/>
+    <SimpleHero
+        header='Website Solutions That Work For You'
+        title='Zoar Valley Software LLC'
+        class='bg-[var(--black)]'
+    >
+        <div class='mt-8'>
+            <a href="#contact" class="font-bold btn--cta">Contact</a>
+        </div>
+    </SimpleHero>  
 
-    <Section class="bg-mid pt-20 pb-10 px-20">
-        <h2 class="text-5xl font-bold mb-12 p-8">What We Offer</h2>
+    <Section class="bg-mid text-center md:text-left">
+        <h2 class="text-5xl font-bold mb-12 p-8 ">What We Offer</h2>
 
         <div class="flex flex-wrap justify-center items-center">
             <div class="lg:w-1/2 w-100% p-8">
@@ -30,7 +38,7 @@ import Section from "../components/Section.astro";
     </Section>
 
     
-    <Section class="bg-light py-24">
+    <Section class="bg-light text-center md:text-left">
         <div class="flex flex-wrap justify-center items-center flex-row-reverse">
             <div class="lg:w-1/2 w-100% p-8">
                 <h3 class="h3">E-Commerce Development</h3>
@@ -51,7 +59,7 @@ import Section from "../components/Section.astro";
         
     </Section>
 
-    <Section class="bg-mid py-24">
+    <Section class="bg-mid text-center md:text-left">
         <div class="flex flex-wrap justify-center items-center">
             <div class="lg:w-1/2 w-100% p-8">
                 <h3 class="h3">Technical Expertise</h3>
@@ -71,7 +79,7 @@ import Section from "../components/Section.astro";
         
     </Section>
 
-    <Section class="bg-light py-24">
+    <Section class="bg-light text-center md:text-left">
         <div class="flex justify-center items-center text-center pb-24">
             <div>
                 <h2 class="h2">Why Choose Us?</h2>

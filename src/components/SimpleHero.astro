@@ -1,4 +1,7 @@
 ---
+import Section from './Section.astro';
+
+
 export interface Props {
     header: string,
     title?: string,
@@ -10,20 +13,16 @@ export interface Props {
 const { header, title, lead, bgImgSrc, class: className } = Astro.props;
 ---
 
-<section 
-    class={`relative grid place-items-center min-h-[40vh] text-center lg:text-left bg-blend-darken bg-[#0005] text-white bg-center bg-cover ${ className }`}
+<Section 
+    class={`relative flex items-center min-h-[25vh] md:min-h-[50vh] text-center md:text-left bg-blend-darken bg-[#0005] text-white bg-center bg-cover ${ className }`}
     style={ bgImgSrc ? `background-image: url(${ bgImgSrc });`: '' }
 >
-    <div class='z-20 max-w-screen-xl grid p-16 lg:px-32 gap-16'>
-        <div>
-            <h1 class='text-2xl mb-4'>{ title }</h1>
-            <h2 class='text-5xl sm:leading-[1] font-bold mb-4'>{ header }</h2>
-            <p class='text-2xl mb-4'>
-                { lead }
-            </p>
-            <slot/>
-        </div>
+    <div class="px-8">
+        <h1 class='text-xl md:text-2xl mb-4'>{ title }</h1>
+        <h2 class='text-3xl md:text-5xl sm:leading-[1] font-bold mb-4'>{ header }</h2>
+        <p class='text-xl md:text-2xl mb-4'>
+            { lead }
+        </p>
+        <slot/>
     </div>
-
-    <slot name='absolutes' />
-</section>
+</Section>
