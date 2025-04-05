@@ -193,3 +193,9 @@ p {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .section {
+        padding-inline: 0rem; /* For mobile, reduce padding */
+        padding-block: 40px;
+    }
+}
