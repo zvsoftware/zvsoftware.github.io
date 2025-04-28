@@ -156,11 +156,11 @@ p {
 
 @layer components {
     .btn {
-        @apply rounded py-2 px-4 cursor-pointer hover:brightness-90 active:brightness-110
+        @apply rounded py-4 px-6 cursor-pointer hover:brightness-90 active:brightness-110 inline-block
     }
 
     .btn--cta {
-        @apply btn bg-cta uppercase;
+        @apply btn bg-cta uppercase font-bold;
     }
 
     .link {

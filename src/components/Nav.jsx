@@ -11,7 +11,7 @@ export default function Nav(props) {
                 </div>
                 
                 <div>
-                    <a href="#contact" class="font-bold btn--cta">Contact</a>
+                    <a href="/contact" class="font-bold btn--cta">Contact</a>
                 </div>
                 
             {/* <a href="/blog" className='text-xl underline'>Blog</a> */}
