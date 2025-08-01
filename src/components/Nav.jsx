@@ -12,7 +12,7 @@ export default function Nav(props) {
                 
                 <div class="flex items-center gap-4">
                     <a href="/contact" class="font-bold btn--cta">Contact</a>
-                    <a href="https://apps.zoarvalleysoftware.com" target="_blank" class="font-bold btn--cta">Our Apps</a>
+                    <a href="https://apps.zoarvalleysoftware.com" target="_blank" class="font-bold">Our Apps</a>
                 </div>
                 
             {/* <a href="/blog" className='text-xl underline'>Blog</a> */}
